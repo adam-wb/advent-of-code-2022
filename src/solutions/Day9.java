@@ -6,7 +6,6 @@ import utils.Knot;
 
 import java.io.IOException;
 import java.util.*;
-import java.util.List;
 
 public class Day9 extends AdventOfCodePuzzle {
 
@@ -31,6 +30,7 @@ public class Day9 extends AdventOfCodePuzzle {
             // Number of steps the head moves
             int step = Integer.parseInt(move[1]);
             System.out.printf("Processing move %s %s\n", direction, step);
+
             for (int i = 0; i < step; i++) {
                 switch (direction) {
                     case "R" -> head.moveRight();
@@ -74,7 +74,7 @@ public class Day9 extends AdventOfCodePuzzle {
                     case "D" -> head.moveDown();
                 }
                 for (int j = 0; j < rope.size() - 1; j++) {
-                    updateTailPosition(rope.get(j), rope.get(j+1));
+                    updateTailPosition(rope.get(j), rope.get(j + 1));
                 }
                 System.out.printf("Head %s, Tail %s\n", head, tail);
                 tailPositions.add(new Coordinate(tail));
