@@ -37,5 +37,9 @@ public class Main {
         AdventOfCodePuzzle day8 = new Day8();
         day8.part1();
         day8.part2();
+
+        AdventOfCodePuzzle day9 = new Day9();
+        day9.part1();
+        day9.part2();
     }
 }

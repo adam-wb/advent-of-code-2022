@@ -125,8 +125,7 @@ public class Day8 extends AdventOfCodePuzzle {
         for (int i = y - 1; i >= 0; i--) {
             viewingDistance++;
             if (forest.get(i).get(x) >= tree) {
-                System.out.printf("Tree at [%s,%s] has viewing distance from above of %s  \n", x, y, viewingDistance);
-                return viewingDistance;
+                break;
             }
         }
         System.out.printf("Tree at [%s,%s] has viewing distance from above of %s  \n", x, y, viewingDistance);
@@ -138,8 +137,7 @@ public class Day8 extends AdventOfCodePuzzle {
         for (int i = y + 1; i < forest.size(); i++) {
             viewingDistance++;
             if (forest.get(i).get(x) >= tree) {
-                System.out.printf("Tree at [%s,%s] has viewing distance from below of %s  \n", x, y, viewingDistance);
-                return viewingDistance;
+                break;
             }
         }
         System.out.printf("Tree at [%s,%s] has viewing distance from below of %s  \n", x, y, viewingDistance);
@@ -151,8 +149,7 @@ public class Day8 extends AdventOfCodePuzzle {
         for (int i = x - 1; i >= 0; i--) {
             viewingDistance++;
             if (forest.get(y).get(i) >= tree) {
-                System.out.printf("Tree at [%s,%s] has viewing distance from the left of %s  \n", x, y, viewingDistance);
-                return viewingDistance;
+                break;
             }
 
         }
@@ -165,8 +162,7 @@ public class Day8 extends AdventOfCodePuzzle {
         for (int i = x + 1; i < forest.get(y).size(); i++) {
             viewingDistance++;
             if (forest.get(y).get(i) >= tree) {
-                System.out.printf("Tree at [%s,%s] has viewing distance from the right of %s  \n", x, y, viewingDistance);
-                return viewingDistance;
+                break;
             }
         }
         System.out.printf("Tree at [%s,%s] has viewing distance from the right of %s  \n", x, y, viewingDistance);
