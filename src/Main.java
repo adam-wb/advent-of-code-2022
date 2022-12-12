@@ -41,5 +41,17 @@ public class Main {
         AdventOfCodePuzzle day9 = new Day9();
         day9.part1();
         day9.part2();
+
+        AdventOfCodePuzzle day10 = new Day10();
+        day10.part1();
+        day10.part2();
+
+        AdventOfCodePuzzle day11 = new Day11();
+        day11.part1();
+        day11.part2();
+
+        AdventOfCodePuzzle day12 = new Day12();
+        day12.part1();
+        day12.part2();
     }
 }
